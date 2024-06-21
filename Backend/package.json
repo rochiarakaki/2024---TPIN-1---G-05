@@ -1,0 +1,18 @@
+{
+  "name": "quien-es-quien",
+  "version": "1.0.0",
+  "description": "proyecto integrador",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "Octavio Pena-Facundo Rodriguez-Felipe Oneto-Bautista Castino",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.5",
+    "nodemon": "^3.1.0"
+  }
+}
