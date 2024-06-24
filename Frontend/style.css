@@ -1,81 +1,116 @@
 body {
-    display: flex;
-    background-color: rgb(179, 43, 197);
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  nav {
-    width: 20%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #0d0daf;
-    padding: 20px;
-    color: white;
-    overflow-y: auto;
-  }
-  
-  nav h2 {
-    margin-bottom: 20px;
-  }
-  
-  nav p {
-    margin: 10px 0;
-  }
-  
-  .pregunta {
-    margin: 10px 0;
-  }
-  
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 10px;
-    overflow: hidden;
-  }
-  
-  header {
-    background-color: #0d0daf;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 24px;
-    margin-bottom: 10px;
-    flex-shrink: 0;
-  }
-  
-  #tablero {
-    background-color: #0d0daf;
-    color: white;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 20px; /* Aumentado el espacio entre imágenes */
-    justify-items: center;
-    flex-grow: 1;
-    overflow-y: auto;
-  }
-  
-  .personaje {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .personaje img {
-    width: 140px; /* Tamaño aumentado de las imágenes */
-    height: 140px; /* Tamaño aumentado de las imágenes */
-  }
-  
-  .personaje p {
-    margin: 5px 0 0 0;
-    text-align: center;
-    font-size: 14px;
-  }
+  display: flex;
+  background-color: rgb(179, 43, 197);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  width: 20%;
+  height: 91.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #0d0daf;
+  padding: 20px;
+  color: white;
+  overflow-y: auto;
+  border: 5px solid rgb(201, 201, 74);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+nav h2 {
+  margin-bottom: 20px;
+}
+
+#seccion-preguntas {
+  width: 100%;
+}
+
+.pregunta {
+  margin: 10px 0;
+  background-color: rgb(179, 43, 197);
+  border: 5px solid rgb(201, 201, 74);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.pregunta:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la pregunta al pasar el mouse */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+  overflow: hidden;
+}
+
+header {
+  background-color: #0d0daf;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 11px;
+  flex-shrink: 0;
+  border: 5px solid rgb(201, 201, 74);
+  border-radius: 10px;
+}
+
+#tablero {
+  background-color: #0d0daf;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px; /* Espacio entre imágenes */
+  justify-items: center;
+  flex-grow: 1;
+  overflow-y: auto;
+  border: 5px solid rgb(201, 201, 74);
+  border-radius: 10px;
+}
+
+.personaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.personaje img {
+  width: 140px; /* Tamaño de las imágenes */
+  height: 140px;
+  border-radius: 10%; /* Para hacer las imágenes redondas */
+  border: 5px solid rgb(201, 201, 74); /* Borde amarillo */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.personaje img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+}
+
+.personaje p {
+  margin: 5px 0 0 0;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px; /* Padding alrededor del texto */
+  background-color: rgb(179, 43, 197); /* Fondo rosa */
+  position: absolute;
+  bottom: -5px; /* Posicionamiento para que el fondo rosa se acople a la imagen */
+  left: 50%; /* Centrado horizontal */
+  transform: translateX(-50%); /* Ajuste de centrado horizontal */
+  border: 2px solid rgb(214, 214, 67);
+  border-radius: 10%;
+}
