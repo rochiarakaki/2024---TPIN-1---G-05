@@ -8,80 +8,266 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <nav>
-    <h2>Preguntas</h2>
-    <div id = seccion-preguntas>
-      <div class="pregunta">
-        1. ¿Tu personaje es un hombre?
+  <div class="containerPresentacion" id="presentacion">
+    <div class="inicio" id="logueamos">
+      <div class="explicacion">
+        <header>
+          <img src="Images/QuienEsQuien.png" width="300px" height="auto">
+        </header>
       </div>
-      <div class="pregunta">
-        2. ¿Tu personaje es una mujer?
+
+      <div class="login">
+        <div class="preguntasLogin">
+          <input id="usuarioLogin" placeholder="ingrese su usuario">
+          <br>
+          <br>
+          <input id="contraseñaLogin" placeholder="ingrese su contraseña">
+          <br>
+          <br>
+          <button onclick="changeScreenIn()" class="botonLogin">Log In</button>
+        </div>
       </div>
-      <div class="pregunta">
-        3. ¿Tu personaje tiene el pelo rubio?
-      </div>
-      <div class="pregunta">
-        4. ¿Tu personaje tiene el pelo oscuro?
-      </div>
-      <div class="pregunta">
-        5. ¿Tu personaje usa gafas?
-      </div>
-      <div class="pregunta">
-        6. ¿Tu personaje lleva gorro/a?
-      </div>
-      <div class="pregunta">
-        7. ¿Tu personaje tiene barba?
-      </div>
-      <div class="pregunta">
-        8. ¿Tu personaje tiene bigote?
-      </div>
-      <div class="pregunta">
-        9. ¿Tu personaje tiene el pelo corto?
-      </div>
-      <div class="pregunta">
-        10. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        11. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        12. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        13. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        14. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        15. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        16. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        17. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        18. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        19. ¿Tu personaje tiene el pelo largo?
-      </div>
-      <div class="pregunta">
-        20. ¿Tu personaje tiene el pelo largo?
+
+      <div class="login">
+        <div class="preguntasLogin">
+          <p>¿No ttienes cuenta?</p>
+          <br>
+          <button onclick="changeScreenRegister()" class="botonRegister">Registrate</button>
+        </div>
       </div>
     </div>
-  </nav>
 
-  <div class="main-content">
-    <header>
-      <h1>¿Quién es quién? (Versión educadores)</h1>
-    </header>
+    <div class="inicio" id="registramos" style="display:none">
+      <div class="explicacion">
+        <header>
+          <img src="Images/QuienEsQuien.png" width="300px" height="auto">
+        </header>
+      </div>
+      <div class="login">
+        <div class="preguntasLogin">
+          <input id="nombre" placeholder="ingrese su nombre">
+          <br>
+          <br>
+          <input id="apellido" placeholder="ingrese su apellido">
+          <br>
+          <br>
+          <input id="dni" placeholder="ingrese su dni">
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="login">
+        <div class="preguntasLogin">
+          <input id="usuario" placeholder="ingrese un nombre de usuario">
+          <br>
+          <br>
+          <input id="contraseña" placeholder="ingrese una contraseña">
+          <br>
+          <br>
+          <button onclick="changeScreenLogIn()" class="botonRegister"> Registrase</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="containerJuego" id="contenido" style="display:none">
+
+    <div class="columnaIzquierda">
+
+      <header>
+        <img src="images/QuienEsQuien.png" alt="poortada" width="380" height="240" class="portada">
+      </header>
+
+      <nav class="seccionPreguntas">
+        <form>
+          <div class="preguntas">¿Tu personaje es un hombre?</div>
+          <div class="preguntas">¿Tu personaje es una mujer?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo rubio?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo oscuro?</div>
+          <div class="preguntas">¿Tu personaje tiene canas?</div>
+          <div class="preguntas">¿Tu personaje usa gafas?</div>
+          <div class="preguntas">¿Tu personaje lleva gorro/a?</div>
+          <div class="preguntas">¿Tu personaje tiene barba?</div>
+          <div class="preguntas">¿Tu personaje tiene bigote?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo corto?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+          <div class="preguntas">¿Tu personaje tiene el pelo largo?</div>
+        </form>
+      </nav>
+
+      <section class="logOut">
+        <button class="botonLogOut" onclick="changeScreenOut()">Log Out</button>
+      </section>
+
+    </div>
+
+    <div class="columnaDerecha">
+
+      <section class="personas">
+
+        <figure>
+          <img src="images/benchi.png" alt="benchi" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/cadenazi.png" alt="cadenazi" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/caro.png" alt="caro" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/damatto.png" alt="damatto" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/efsi.png" alt="efsi" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/facon.png" alt="facon" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/feliccalvo.png" alt="feliccalvo" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/giambroni.png" alt="giambroni" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/marche.png" alt="marche" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/martennn.png" alt="martennn" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/naboni.png" alt="naboni" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/nadeo.png" alt="nadeo" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/paul.png" alt="paul" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/sturlix.png" alt="sturlix" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/benchi.png" class="personaje" alt="benchi">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/benchi.png" class="personaje" alt="benchi">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/benchi.png" class="personaje" alt="benchi">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/benchi.png" class="personaje" alt="benchi">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/benchi.png" class="personaje" alt="benchi">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/benchi.png" class="personaje" alt="benchi">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/benchi.png" class="personaje" alt="benchi">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/benchi.png" class="personaje" alt="benchi">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/benchi.png" class="personaje" alt="benchi">
+          <figcaption>benchi</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/timi.png" alt="timi" class="personaje">
+          <figcaption>benchi</figcaption>
+        </figure>
+      </section>
+      <!-- Sección de Temporizador y Contadores -->
+      <section class="temporizador-y-contadores">
+        <div id="temporizador">
+          Tiempo restante: <span id="tiempo-restante">02:00</span>
+        </div>
+        <div id="contador-usuario">
+          Usuario: <span id="partidas-usuario">0</span> partidas ganadas
+        </div>
+        <div id="contador-maquina">
+          Máquina: <span id="partidas-maquina">0</span> partidas ganadas
+        </div>
+      </section>
+    </div>
+  </div>
+  </div>
+
+  <script src="dom.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- <div class="main-content">
+
     <div id="tablero">
       <div class="personaje">
         <img src="images/benchi.png" alt="benchi">
@@ -180,11 +366,18 @@
         <p>Timi</p>
       </div>
     </div>
-  </div>
-  <script src="dom.js"></script>
-  <script src="functions.js"></script>
-  <script src="style.css"></script>
-  <script src="script.js"></script>
-</body>
-
-</html>
+  </div> -->
+<!-- <nav>
+    <form>
+      <div class="pregunta">1. ¿Tu personaje es un hombre?</div>
+      <div class="pregunta">2. ¿Tu personaje es una mujer?</div>
+      <div class="pregunta">3. ¿Tu personaje tiene el pelo rubio?</div>
+      <div class="pregunta">4. ¿Tu personaje tiene el pelo oscuro?</div>
+      <div class="pregunta">5. ¿Tu personaje usa gafas?</div>
+      <div class="pregunta">6. ¿Tu personaje lleva gorro/a?</div>
+      <div class="pregunta">7. ¿Tu personaje tiene barba?</div>
+      <div class="pregunta">8. ¿Tu personaje tiene bigote?</div>
+      <div class="pregunta">9. ¿Tu personaje tiene el pelo corto?</div>
+      <div class="pregunta">10. ¿Tu personaje tiene el pelo largo?</div> 
+    </form>
+  </nav> -->

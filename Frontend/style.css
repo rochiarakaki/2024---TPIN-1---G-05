@@ -1,116 +1,284 @@
-body {
-  display: flex;
-  background-color: rgb(179, 43, 197);
+/* ACLARACIONES DE FORMATO */
+
+/* FUENTE(posibles): 
+. https://fonts.google.com/specimen/Lilita+One?preview.layout=grid
+. https://fonts.google.com/specimen/Lilita+One?preview.layout=grid
+. https://fonts.google.com/specimen/Indie+Flower?preview.layout=grid
+. https://fonts.google.com/specimen/Acme?preview.layout=grid
+. https://fonts.google.com/specimen/Luckiest+Guy?preview.layout=grid
+. https://fonts.google.com/specimen/Bangers?preview.layout=grid
+. https://fonts.google.com/specimen/Patrick+Hand?preview.layout=grid */
+/* GAMA DE COLORES: ¿Azules? */
+/* IMAGEN DE TITULO DE JUEGO (canva o otro progrema): */
+
+body, html {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  height: 100vh;
+  height: 100%;
+  background-color: rgb(129, 129, 209);
   overflow: hidden;
 }
 
-nav {
-  width: 20%;
-  height: 91.5vh;
+nav{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #0d0daf;
-  padding: 20px;
+
   color: white;
-  overflow-y: auto;
-  border: 5px solid rgb(201, 201, 74);
+  overflow-y:auto;
+  
+
   border-radius: 10px;
-  margin-top: 20px;
-  margin-left: 20px;
+  max-height: 40%;
+
 }
 
-nav h2 {
-  margin-bottom: 20px;
+hr {
+  border-top: 2px solid #000000;
+  width: 50%;
 }
 
-#seccion-preguntas {
-  width: 100%;
+figure{
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
 }
 
-.pregunta {
-  margin: 10px 0;
-  background-color: rgb(179, 43, 197);
-  border: 5px solid rgb(201, 201, 74);
+figcaption{
+  color: #000000;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+
+
+}
+
+input{
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 13px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* ESTILOS DE FONT */
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* PAGINA DE PRESENTACION */
+.containerPresentacion{
+  display:flex;
+  height:100%;
+  margin:0;
+  justify-content:center;
+  align-items:center;
+}
+
+/* PAGINA LOGIN */
+.inicio{
+  height: 230px;
+  width: 800px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+
+  gap: 30px; 
+  padding: 30px;
+
   border-radius: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  transition: transform 0.3s ease; /* Transición suave */
+  border-style:solid;
+  border-color: #f0f0f0;
+  background-color: rgb(255, 255, 255);
+
 }
 
-.pregunta:hover {
+/* EXPLIACION DEL JUEGO */
+.explicacion{
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN EL JUEGO */
+.login{
+  text-align: center;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+}
+
+.preguntasLogin {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  
+}
+
+/* BOTTON DE INICIO */
+.botonLogin{
+  padding:8px; 
+  padding-left: 25px;
+  padding-right: 25px;
+
+  border-radius: 5px;
+
+  background-color: rgb(2, 102, 2);
+  color: white;
+  font-size: 15px;
+}
+
+.botonRegister{
+  padding:8px; 
+  padding-left: 25px;
+  padding-right: 25px;
+
+  border-radius: 5px;
+
+  background-color: rgb(100, 4, 4);
+  color: white;
+  font-size: 15px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* PAGINA DEL JUEGO */
+.containerJuego{
+display: grid; 
+grid-template-columns: 1fr 3fr; 
+
+}
+
+/* COLUMNA DE LAS PREGUNTAS */
+.columnaIzquierda {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: left;
+
+padding: 10px;
+background-color: #6e6eff;
+color: white;
+
+}
+
+.portada {
+  width: auto;
+  height: 130px;
+  margin-left: 50px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.preguntas {
+  margin: 15px;
+  padding: 5px;
+
+  font-size: 20px;
+  text-align: center;
+
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+
+}
+
+
+.preguntas:hover {
   transform: scale(1.05); /* Aumenta el tamaño de la pregunta al pasar el mouse */
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 10px;
-  overflow: hidden;
+
+/* LOG OUT */
+.logOut{
+  padding-top: 35px;
+  padding-left: 20px;
 }
 
-header {
-  background-color: #0d0daf;
+.botonLogOut {
+  background-color: rgb(92, 1, 1);
   color: white;
-  text-align: center;
   padding: 10px;
-  font-size: 24px;
-  margin-bottom: 10px;
-  margin-top: 11px;
-  flex-shrink: 0;
-  border: 5px solid rgb(201, 201, 74);
   border-radius: 10px;
+  font-size: 13px;
 }
 
-#tablero {
-  background-color: #0d0daf;
-  color: white;
+/* COLUMNA DE PERSONAJES */
+.columnaDerecha {
   padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #6e6eff;
+  color: white;
+}
+
+/* TABLERO DE PERSONAS */
+.personas{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px; /* Espacio entre imágenes */
   justify-items: center;
+  
+  grid-gap: 10px; 
   flex-grow: 1;
-  overflow-y: auto;
-  border: 5px solid rgb(201, 201, 74);
-  border-radius: 10px;
 }
+
+.personas img:hover {
+  transform: scale(1.1);
+}
+
 
 .personaje {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+
+  border: 3px solid rgb(255, 255, 255); 
+
+  width: 120px; 
+  height: 120px; 
 }
 
-.personaje img {
-  width: 140px; /* Tamaño de las imágenes */
-  height: 140px;
-  border-radius: 10%; /* Para hacer las imágenes redondas */
-  border: 5px solid rgb(201, 201, 74); /* Borde amarillo */
-  transition: transform 0.3s ease; /* Transición suave */
+.temporizador-y-contadores {
+  display: flex;
+  justify-content: space-around; /* Distribuye los elementos equitativamente */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-top: 5%;
+  color: black;
 }
 
-.personaje img:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+
+#contador-maquina {
+  flex: 1; /* Ocupan el mismo espacio disponible */
+  text-align: center; /* Centra el texto */
+  padding: 10px;
+  border-left: 1px solid #ccc; /* Línea separadora entre los contadores */
 }
 
-.personaje p {
-  margin: 5px 0 0 0;
-  text-align: center;
-  font-size: 16px;
-  padding: 8px; /* Padding alrededor del texto */
-  background-color: rgb(179, 43, 197); /* Fondo rosa */
-  position: absolute;
-  bottom: -5px; /* Posicionamiento para que el fondo rosa se acople a la imagen */
-  left: 50%; /* Centrado horizontal */
-  transform: translateX(-50%); /* Ajuste de centrado horizontal */
-  border: 2px solid rgb(214, 214, 67);
-  border-radius: 10%;
+#temporizador {
+  flex: 1; /* Ocupan el mismo espacio disponible */
+  text-align: center; /* Centra el texto */
+  padding: 10px;
+  border-right: 1px solid #ccc; /* Línea separadora entre los contadores */
+}
+
+#contador-usuario {
+  flex: 1; /* Ocupan el mismo espacio disponible */
+  text-align: center; /* Centra el texto */
+  padding: 10px;
+  border-right: 1px solid #ccc; /* Línea separadora entre los contadores */
 }
