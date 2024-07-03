@@ -61,6 +61,21 @@ function changeScreenLogIn() {
     }
 }
 
+function changeScreenRank() {
+    const contenido = document.getElementById("contenido");
+    const ranking = document.getElementById("ranking");
+    
+
+    if(ranking.style.display !== "none") {
+        ranking.style.display = "none";
+        contenido.style.display = "";
+    }
+    else {
+        ranking.style.display = "";
+        contenido.style.display = "none";
+    }
+}
+
 // GET
 
 function getUserLogIn() {

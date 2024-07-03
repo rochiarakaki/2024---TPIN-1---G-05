@@ -36,7 +36,7 @@
 
       <div class="login">
         <div class="preguntasLogin">
-          <p>¿No ttienes cuenta?</p>
+          <p>¿No tienes cuenta?</p>
           <br>
           <button onclick="changeScreenRegister()" class="botonRegister">Registrate</button>
         </div>
@@ -81,7 +81,7 @@
     <div class="columnaIzquierda">
 
       <header>
-        <img src="images/QuienEsQuien.png" alt="poortada" width="380" height="240" class="portada">
+        <button onclick="changeScreenRank()" id="botonRanking"> <img src="images/QuienEsQuien.png" alt="poortada" width="380" height="240" class="portada"></button>
       </header>
 
       <nav class="seccionPreguntas">
@@ -255,6 +255,10 @@
       </section>
     </div>
   </div>
+  </div>
+  <div class="containerRanking" id="ranking" style="display:none">
+
+
   </div>
 
   <script src="dom.js"></script>

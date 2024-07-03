@@ -171,7 +171,7 @@ align-items: left;
 padding: 10px;
 background-color: #6e6eff;
 color: white;
-
+height: 1037px;
 }
 
 .portada {
@@ -214,6 +214,11 @@ color: white;
   padding: 10px;
   border-radius: 10px;
   font-size: 13px;
+  margin-top: -3%;
+}
+
+.botonLogOut:hover {
+  transform: scale(1.1);
 }
 
 /* COLUMNA DE PERSONAJES */
@@ -245,8 +250,8 @@ color: white;
 
   border: 3px solid rgb(255, 255, 255); 
 
-  width: 120px; 
-  height: 120px; 
+  width: 100px; 
+  height: 100px; 
 }
 
 .temporizador-y-contadores {
@@ -257,8 +262,10 @@ color: white;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 10px;
-  margin-top: 5%;
+  margin-top: 1%;
   color: black;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 
