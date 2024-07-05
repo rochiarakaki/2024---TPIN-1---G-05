@@ -177,7 +177,15 @@ height: 1037px;
 .portada {
   width: auto;
   height: 130px;
-  margin-left: 50px;
+}
+
+#botonRanking {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+#botonRanking:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la pregunta al pasar el mouse */
 }
 
 ::-webkit-scrollbar {
@@ -213,8 +221,9 @@ height: 1037px;
   color: white;
   padding: 10px;
   border-radius: 10px;
-  font-size: 13px;
-  margin-top: -3%;
+  font-size: 18px;
+  margin-bottom: 415px;
+  height: 60px;
 }
 
 .botonLogOut:hover {
@@ -288,4 +297,54 @@ height: 1037px;
   text-align: center; /* Centra el texto */
   padding: 10px;
   border-right: 1px solid #ccc; /* Línea separadora entre los contadores */
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/*PAGINA RANKING*/
+
+.containerRanking {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#tableroRanking {
+  height: 500px;
+  width: 800px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #f0f0f0;
+  background-color: rgb(255, 255, 255);
+}
+
+#h2Ranking {
+  font-size: 40px;
+  margin-top: 20px; /* Ajusta este valor para centrar verticalmente según sea necesario */
+  text-align: center;
+}
+#h3TopJugadores {
+  font-size: 20px;
+  margin-top: 20px; /* Ajusta este valor para centrar verticalmente según sea necesario */
+  text-align: center;
+}
+
+#columnaTopJugadores{
+  margin-left: 20px;
+  height: 350px;
+  width: 300px;
+  background-color: aqua;
+}
+
+#h3Puntaje {
+  font-size: 20px;
+  margin-top: 20px; /* Ajusta este valor para centrar verticalmente según sea necesario */
+  text-align: center;
+}
+
+#columnaPuntajes{
+  margin-left: 20px;
+  height: 350px;
+  width: 300px;
+  background-color: aqua;
 }
