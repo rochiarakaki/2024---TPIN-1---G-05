@@ -80,8 +80,8 @@
 
     <div class="columnaIzquierda">
 
-      <header>
-        <button onclick="changeScreenRank()" id="botonRanking"> <img src="images/QuienEsQuien.png" alt="poortada" width="380" height="240" class="portada"></button>
+      <header id="botonRanking">
+        <button onclick="changeScreenRank()"> <img src="images/QuienEsQuien.png" alt="portada" width="380" height="240" class="portada"></button>
       </header>
 
       <nav class="seccionPreguntas">
@@ -257,8 +257,26 @@
   </div>
   </div>
   <div class="containerRanking" id="ranking" style="display:none">
-
-
+    <div id="tableroRanking">
+      <h2 id="h2Ranking">Ranking</h2>
+      <div id="columnaTopJugadores">
+          <h3 id="h3TopJugadores">Top Jugadores</h3>
+        <ol>
+          <li>Eat</li>
+          <li>Code</li>
+          <li>Sleep</li>
+        </ol>
+      </div>
+      <div id="columnaPuntajes">
+        <h3 id="h3Puntajes">Mejores Puntajes</h3>
+      <ol>
+        <li>Eat</li>
+        <li>Code</li>
+        <li>Sleep</li>
+      </ol>
+    </div>
+      
+    </div>
   </div>
 
   <script src="dom.js"></script>
