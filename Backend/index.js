@@ -1,9 +1,11 @@
 var express = require('express'); //Tipo de servidor: Express
 var bodyParser = require('body-parser'); //Convierte los JSON
-var cors = require('cors');
+const MySQL = require('./modulos/mysql')
+const cors = require('cors');
 
 var app = express(); //Inicializo express
-var port = process.env.PORT || 3000; //Ejecuto el servidor en el puerto 3000
+var port = 7000
+//process.env.PORT || 3000; //Ejecuto el servidor en el puerto 3000
 
 // Convierte una petición recibida (POST-GET...) a objeto JSON
 app.use(bodyParser.urlencoded({extended:false}));
@@ -16,18 +18,13 @@ app.get('/', function(req, res){
     });
 });
 
-/**
- * req = request. en este objeto voy a tener todo lo que reciba del cliente
- * res = response. Voy a responderle al cliente
- */
-app.get('/saludo', function(req,res){
-    console.log(req.query) //Los pedidos get reciben los datos del req.query
-    res.send({respuesta: `Respuesta del Backend`})
-})
 
-app.post('/nombreDelPedido', function(req,res) {
-    console.log(req.body) //Los pedidos post reciben los datos del req.body
-    res.send("ok")
+app.get('/JugadoresDos', async function(req,res){
+    console.log(req.query) 
+    const respuesta = await MySQL.realizarQuery(`
+    SELECT * FROM JugadoresDos;
+    `)
+    res.send(respuesta)
 })
 
 //Pongo el servidor a escuchar
